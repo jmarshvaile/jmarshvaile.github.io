@@ -3,7 +3,7 @@ author:
   name: Jon-Marshall Vaile
   email: jmarshvaile@gmail.com
 description: > # this means to ignore newlines until "show_excerpts:"
-  Topics in data science with Python.
+  Topics in data with Python.
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
@@ -56,3 +56,11 @@ theme: minima
 plugins:
  - jekyll-feed
  - jekyll-seo-tag
+ 
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      author: "Jon-Marshall Vaile"

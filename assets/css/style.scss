@@ -3,5 +3,6 @@
 ---
 
 @import
+  "bootstrap/bootstrap",
   "minima/skins/{{ site.minima.skin | default: 'classic' }}",
   "minima/initialize";

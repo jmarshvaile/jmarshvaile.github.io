@@ -2,7 +2,7 @@
 layout: post
 ---
 
-The following is taken from the official Docker product manual for [Ubuntu installations](https://docs.docker.com/engine/install/ubuntu/). For other supported platforms, see their [main installation page](https://docs.docker.com/engine/install/).
+If this guide is outdated, see the official Docker product manual for [Ubuntu installations](https://docs.docker.com/engine/install/ubuntu/). For other supported platforms, see their [main installation page](https://docs.docker.com/engine/install/).
 
 {% highlight bash %}
 $ sudo apt-get update
@@ -35,14 +35,9 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io
 $ sudo docker run hello-world
 {% endhighlight %}
 
-> **WARNING:** The docker group grants privileges equivalent to the root user. For details on how this impacts security in your system, see [Docker Daemon Attack Surface](https://docs.docker.com/engine/security/security/#docker-daemon-attack-surface).
+You can optionally add the user to the docker group to avoid typing `sudo docker` each time.
 
-**WARNING:** The docker group grants privileges equivalent to the root user. For details on how this impacts security in your system, see [Docker Daemon Attack Surface](https://docs.docker.com/engine/security/security/#docker-daemon-attack-surface).
-
-{% render_time %}
-page rendered at:
-{% endrender_time %}
-
+{% include callouts.html type="danger" content="The docker group grants privileges equivalent to the root user. For details on how this impacts security in your system, see [Docker Daemon Attack Surface](https://docs.docker.com/engine/security/security/#docker-daemon-attack-surface)." %}
 
 {% highlight bash %}
 $ sudo usermod -aG docker $USER

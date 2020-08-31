@@ -1,4 +1,10 @@
 <div class="callout callout-{{ include.type }}">
-    <h6>{{ include.type }}</h6>
+    <h6>
+        {% if include.header %}
+            {{ include.header }}
+        {% else %}
+            {{ include.type }}
+        {% endif %}
+    </h6>
     <p markdown="span">{{ include.content }}</p>
 </div>

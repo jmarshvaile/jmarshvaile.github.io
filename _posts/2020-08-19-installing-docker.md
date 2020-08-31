@@ -2,11 +2,14 @@
 layout: post
 ---
 
-If this guide is outdated, see the official Docker product manual for [Ubuntu installations](https://docs.docker.com/engine/install/ubuntu/). For other supported platforms, see their [main installation page](https://docs.docker.com/engine/install/).
+{% include callouts.html type="warning" header="assumptions" content="You are running the 64-bit version of Ubuntu 16.04 or higher, and you do not already have an older version of Docker installed. See the official product manual for other [supported platforms](https://docs.docker.com/engine/install/)." %}
+
+To proceed, enter the following commands into your bash terminal and answer all prompts.
 
 {% highlight bash %}
 $ sudo apt-get update
-
+{% endhighlight %}
+{% highlight bash %}
 $ sudo apt-get install \
     apt-transport-https \
     ca-certificates \
@@ -19,6 +22,8 @@ $ sudo apt-get install \
 $ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 {% endhighlight %}
 
+{% include callouts.html type="primary" header="note" content="Docker Engine is supported on `amd64`, `armhf`, and `arm64` architectures. Replace the abbreviation in [arch=`<abbr>`] with the architecture matching your OS." %}
+
 {% highlight bash %}
 $ sudo add-apt-repository \
    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
@@ -28,6 +33,9 @@ $ sudo add-apt-repository \
 
 {% highlight bash %}
 $ sudo apt-get update
+{% endhighlight %}
+
+{% highlight bash %}
 $ sudo apt-get install docker-ce docker-ce-cli containerd.io
 {% endhighlight %}
 
@@ -35,9 +43,11 @@ $ sudo apt-get install docker-ce docker-ce-cli containerd.io
 $ sudo docker run hello-world
 {% endhighlight %}
 
-You can optionally add the user to the docker group to avoid typing `sudo docker` each time.
+Your Docker Engine is now installed, running, and ready to use. Get started with Docker by following their official [quickstart guide](https://docs.docker.com/get-started/).
 
-{% include callouts.html type="danger" content="The docker group grants privileges equivalent to the root user. For details on how this impacts security in your system, see [Docker Daemon Attack Surface](https://docs.docker.com/engine/security/security/#docker-daemon-attack-surface)." %}
+You can optionally add the user to the docker group to avoid typing `sudo` before each docker call.
+
+{% include callouts.html type="danger" header="caution" content="The docker group grants privileges equivalent to the root user. For details on how this impacts security in your system, see [Docker Daemon Attack Surface](https://docs.docker.com/engine/security/security/#docker-daemon-attack-surface)." %}
 
 {% highlight bash %}
 $ sudo usermod -aG docker $USER

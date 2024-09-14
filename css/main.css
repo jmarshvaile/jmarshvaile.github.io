@@ -7,6 +7,11 @@ body {
     margin: 0;
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+}
+
 .grid-item-1-2 {
     grid-column-start: 1;
     grid-column-end: 2;
@@ -20,9 +25,4 @@ body {
 .grid-item-1-8 {
     grid-column-start: 1;
     grid-column-end: 8;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto;
 }

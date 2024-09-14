@@ -1,15 +1,25 @@
+/* pre-format */
+
 * { outline: 1px solid white; outline-offset: -1px; }
+
+html, body { 
+    height: 100%;
+    margin: 0;
+}
+
+/* main */
 
 body {
     background-color: black;
-    color: white;
     font-size: 1.25em;
-    margin: 0;
+    color: white;
 }
 
 .grid-container {
     display: grid;
+    height: 100%;
     grid-template-columns: auto auto auto auto auto auto auto;
+    grid-template-rows: max-content auto max-content;
 }
 
 .grid-item-1-2 {

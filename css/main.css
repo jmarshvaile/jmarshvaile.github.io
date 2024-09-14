@@ -18,6 +18,7 @@ body {
 
 .grid-container {
     display: grid;
+    gap: 8px;
     height: calc(100% - 2*8px);
     grid-template-columns: repeat(7, auto);
     grid-template-rows: max-content auto max-content;

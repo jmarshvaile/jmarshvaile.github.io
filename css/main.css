@@ -1,19 +1,36 @@
 /* pre-format */
 
-* { outline: 1px solid white; outline-offset: -1px; }
+/* * { outline: 1px solid white; outline-offset: -1px; } */
 
 html, body { 
     height: 100%;
     margin: 0;
 }
 
+a {
+    display: inline-block;
+    height: 100%;
+    color: inherit;
+    text-decoration: inherit;
+}
+
 /* main */
 
+a:hover, a:active {
+    font-weight: bold;
+}
+
 body {
-    background-color: black;
-    font-size: 1.25em;
+    font-size: 3em;
     color: white;
+    background-color: black;
     padding: 8px;
+}
+
+.home {
+    width: 1lh;
+    height: 100%;
+    background-color: white;
 }
 
 .grid-container {
